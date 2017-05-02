@@ -140,8 +140,8 @@ $db['characters'] = array(
 );
 
 $db['world'] = array(
-	'dsn'	=> 'localhost',
-	'hostname' => '',
+	'dsn'	=> '',
+	'hostname' => 'localhost',
 	'username' => '',
 	'password' => '',
 	'database' => '',
