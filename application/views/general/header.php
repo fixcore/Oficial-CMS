@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Heroes WoW | WoW Private Server - Home</title>
 <meta name="google-site-verification" content="ITyYC9susLngZxIqQFBvYThIn4dMWuKZB-0EuBR8dYU" />
 <meta name="msvalidate.01" content="BDC2B36156186900DF980E81968F5AE0" />
 <meta name="author" content="Heroes WoW">
@@ -61,4 +60,3 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 </script><script type="text/javascript" src="<?= base_url(); ?>assets/js/cookie-consent.js"></script>
-</head>

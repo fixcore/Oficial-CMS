@@ -1,65 +1,16 @@
+<!-- don't touch -->
+<title><?= $this->config->item('project_name'); ?> - <?= $this->lang->line('home'); ?></title>
+</head>
+<!-- don't touch -->
 <body>
 
  <center>
 
  <!--HEADER-->
- <div id="header" align="center">
-   <div class="holder">
-   		
-        <ul class="top-navigation">
-        	<li><a id="home" href="https://heroes-wow.com/wotlk/index.php?page=home"><p></p></a></li>
-            <li><a id="forums" href="https://forum.heroes-wow.com/"><p></p></a></li>
-			<li>
-            	<a id="media" href="https://heroes-wow.com/wotlk/index.php?page=media"><p></p></a>
-                <p></p>
-                	<div class="nddm-holder media" align="center">
-		                <div class="navi-dropdown" style="left: 10px;">
-                            <span><a href="https://heroes-wow.com/wotlk/index.php?page=all-wallpapers">Wallpapers</a></span>
-                            <span><a href="https://heroes-wow.com/wotlk/index.php?page=all-videos">Videos</a></span>
-                            <span><a href="https://heroes-wow.com/wotlk/index.php?page=all-screenshots">Screenshots</a></span>
-		                </div>
-                    </div>
-            </li>
-			
-			<li id="logo"><a href="https://heroes-wow.com/wotlk"><p></p></a></li>
-			
-			<li>
-            	<a id="features" href="https://heroes-wow.com/wotlk/index.php?page=features"><p></p></a>
-                <p></p>
-                	<div class="nddm-holder features" align="center">
-		                <div class="navi-dropdown">
-                            <span><a href="https://heroes-wow.com/wotlk/index.php?page=downloads">Downloads</a></span>
-                            <span><a href="https://forum.heroes-wow.com/bugtracker.php">Bug Tracker</a></span>
-                            <span><a href="https://heroes-wow.com/wotlk/index.php?page=working_content">Working Content</a></span>
-			    <span><a href="https://heroes-wow.com/wotlk/index.php?page=ranking">PvP Ranking</a></span>
-
-                           
-                        
-		                </div>
-                    </div>
-            </li>
-             <li id="support">
-                <p></p>
-                	<div class="nddm-holder" align="center">
-		                <div class="navi-dropdown" style="left: 20px;">
-	                    	<!--<span><a href="https://heroes-wow.com/wotlk/index.php?page=addons">Addons</a></span>-->
-                            <span><a href="https://heroes-wow.com/wotlk/index.php?page=howto">How to</a></span>
-                            <span><a href="https://forum.heroes-wow.com/forumdisplay.php?10-Support-amp-Q-A">Support</a></span>
-                            <span><a href="https://heroes-wow.com/wotlk/index.php?page=terms-of-use">Terms of Use</a></span>
-
-                            <span><a href="https://heroes-wow.com/wotlk/index.php?page=rules">Rules</a></span>
-			     
-		                </div>
-                    </div>
-             </li>
-
-            <li><a id="goal" href="https://heroes-wow.com/wotlk/index.php?page=changelogs"><p></p></a></li>
-        </ul>
-   
-   </div>
- </div>
+ <?php require('general/menu.php'); ?>
  <!--HEADER.End-->
- 
+
+<!-- images -->
 <div id="image_header" align="center">
 
 	<div class="slider" id="warcry-slider" align="center">
@@ -84,6 +35,7 @@
 <img src="<?= base_url(); ?>assets/images/3.png" style="opacity:0;"/>
 			</div></div>    
 </div>
+<!-- images -->
 
 <div class="main_a_holder" align="center">
 <!-- BODY-->
@@ -124,17 +76,18 @@
 
 <div class="content_holder">
 
-
+<!-- anuncio -->
 	<div class="important_notice">
 		<p><a href="http://heroes-wow.com/wotlk/index.php?page=application"><b>Heroes WoW GM Recruitment</b></a></p>
 	</div>
+<!-- anuncio -->
 	
 <!-- Main Side -->
 <div class="main_side">
  
 <!-- Index News -->
 <div class="index_news">
-   
+
    	<div class="welcome_to_warcry">
     	<h1>Welcome to Heroes WoW</h1>
 		<span></span>
