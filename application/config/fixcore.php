@@ -18,21 +18,29 @@
 */
 
 /*
+ -- Expansión -- Please select
+ * 1 = TBC
+ * 2 = WOTLK
+ * 3 = CATACLYSM
+ * 4 = MIST OF PANDARIA
+ * 5 = WARLORDS OF DRAENOR
+ * 6 = LEGION
+*/
+$config['expansion_selector'] = '6'; //change the number
+
+
+/*
  * Name server
 */
-$config['project_name'] = "Oficial CMS";
+$config['project_name'] = 'Oficial CMS'; //name server
 
 //social
-$config['project_twitter_id'] = '@fixcore1';
+$config['project_twitter_id'] = '@fixcore1'; //id twitter
 
 
 //metas
-$config['meta_title'] = 'WoW Private Server - Home page';
-$config['meta_description'] = 'Welcome to Heroes WoW Private WoW Server - wotlk and mop wow servers, wod and legion content, blizzlike and fun servers.';
-$config['meta_keyboards'] = 'Heroes WoW, WoW, World of Warcraft, wow server, wow servers, Warcraft, 255 Level, wow private server, Private WoW Server, wotlk server, wow fun server, best free private server, largest private server, wotlk private server, mists of pandaria, mop, legion, wod';
-$config['meta_copyright'] = 'Copyright www.heroes-wow.com | (c) heroes-wow.com all rights reserved.';
-$config['meta_email'] = 'admin@heroes-wow.com';
-$config['meta_title'] = 'WoW Private Server - Home page';
-$config['meta_title'] = 'WoW Private Server - Home page';
-$config['meta_title'] = 'WoW Private Server - Home page';
-$config['meta_title'] = 'WoW Private Server - Home page';
+$config['meta_title'] = 'FixCore - Home page';
+$config['meta_description'] = 'Welcome to FixCore Private WoW Server - wotlk and mop wow servers, wod and legion content, blizzlike and fun servers.';
+$config['meta_keyboards'] = 'FixCore, WoW, World of Warcraft, wow server, wow servers, Warcraft, 255 Level, wow private server, Private WoW Server, wotlk server, wow fun server, best free private server, largest private server, wotlk private server, mists of pandaria, mop, legion, wod';
+$config['meta_copyright'] = 'Copyright https://www.facebook.com/fixcore1/ | (c) https://www.facebook.com/fixcore1/ all rights reserved.';
+$config['meta_email'] = 'admin@fixcore1';
