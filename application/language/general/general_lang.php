@@ -22,11 +22,18 @@ $lang['home'] = 'Home';
 
 
 //menu
-$lang['menu_home'] = 'Home';
-$lang['home'] = 'Home';
-$lang['home'] = 'Home';
-$lang['home'] = 'Home';
-$lang['home'] = 'Home';
+$lang['menu_wallpaper'] = 'Wallpapers';
+$lang['menu_video'] = 'Videos';
+$lang['menu_screenshot'] = 'Screenshots';
+$lang['menu_downloads'] = 'Downloads';
+$lang['menu_bugtracker'] = 'Bugtracker';
+$lang['menu_working'] = 'Working Content';
+$lang['menu_pvprank'] = 'PvP Ranking';
+$lang['menu_addons'] = 'Addons';
+$lang['menu_howto'] = 'How to';
+$lang['menu_support'] = 'Support';
+$lang['menu_termsofuse'] = 'Terms of Use';
+$lang['menu_rules'] = 'Rules';
 
 
 ?>

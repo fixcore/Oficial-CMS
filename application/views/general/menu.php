@@ -9,9 +9,9 @@
                 <p></p>
                 	<div class="nddm-holder media" align="center">
 		                <div class="navi-dropdown" style="left: 10px;">
-                            <span><a href="<?= base_url(); ?>wallpapers">Wallpapers</a></span>
-                            <span><a href="<?= base_url(); ?>videos">Videos</a></span>
-                            <span><a href="<?= base_url(); ?>screenshots">Screenshots</a></span>
+                            <span><a href="<?= base_url(); ?>wallpapers"><?= $this->lang->line('menu_wallpaper'); ?></a></span>
+                            <span><a href="<?= base_url(); ?>videos"><?= $this->lang->line('menu_video'); ?></a></span>
+                            <span><a href="<?= base_url(); ?>screenshots"><?= $this->lang->line('menu_screenshot'); ?></a></span>
 		                </div>
                     </div>
             </li>
@@ -23,10 +23,10 @@
                 <p></p>
                 	<div class="nddm-holder features" align="center">
 		                <div class="navi-dropdown">
-                            <span><a href="<?= base_url(); ?>downloads">Downloads</a></span>
-                            <span><a href="<?= base_url(); ?>bugtracker">Bug Tracker</a></span>
-                            <span><a href="<?= base_url(); ?>working">Working Content</a></span>
-			    <span><a href="<?= base_url(); ?>ranking">PvP Ranking</a></span>
+                            <span><a href="<?= base_url(); ?>downloads"><?= $this->lang->line('menu_downloads'); ?></a></span>
+                            <span><a href="<?= base_url(); ?>bugtracker"><?= $this->lang->line('menu_bugtracker'); ?></a></span>
+                            <span><a href="<?= base_url(); ?>working"><?= $this->lang->line('menu_working'); ?></a></span>
+			    <span><a href="<?= base_url(); ?>ranking"><?= $this->lang->line('menu_pvprank'); ?></a></span>
 
                            
                         
@@ -37,12 +37,12 @@
                 <p></p>
                 	<div class="nddm-holder" align="center">
 		                <div class="navi-dropdown" style="left: 20px;">
-	                    	<span><a href="<?= base_url(); ?>addons">Addons</a></span>
-                            <span><a href="<?= base_url(); ?>howto">How to</a></span>
-                            <span><a href="<?= base_url(); ?>support">Support</a></span>
-                            <span><a href="<?= base_url(); ?>terms_of_use">Terms of Use</a></span>
+	                    	<span><a href="<?= base_url(); ?>addons"><?= $this->lang->line('menu_addons'); ?></a></span>
+                            <span><a href="<?= base_url(); ?>howto"><?= $this->lang->line('menu_howto'); ?></a></span>
+                            <span><a href="<?= base_url(); ?>support"><?= $this->lang->line('menu_support'); ?></a></span>
+                            <span><a href="<?= base_url(); ?>terms_of_use"><?= $this->lang->line('menu_termsofuse'); ?></a></span>
 
-                            <span><a href="<?= base_url(); ?>rules">Rules</a></span>
+                            <span><a href="<?= base_url(); ?>rules"><?= $this->lang->line('menu_rules'); ?></a></span>
 			     
 		                </div>
                     </div>
