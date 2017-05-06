@@ -20,4 +20,13 @@
 
 $lang['home'] = 'Home';
 
+
+//menu
+$lang['menu_home'] = 'Home';
+$lang['home'] = 'Home';
+$lang['home'] = 'Home';
+$lang['home'] = 'Home';
+$lang['home'] = 'Home';
+
+
 ?>
