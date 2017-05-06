@@ -21,3 +21,6 @@
  * Name server
 */
 $config['project_name'] = "Oficial CMS";
+
+//social
+$config['project_twitter_id'] = '@fixcore1';
