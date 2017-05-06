@@ -18,7 +18,19 @@
  * -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- *
 */
 
+//general
 $lang['home'] = 'Home';
+$lang['sign_in'] = 'Sign in';
+$lang['register'] = 'Register';
+$lang['read_more'] = 'Read More';
+$lang['latest_news'] = 'Latest News';
+$lang['archived_news'] = 'Archived News';
+$lang['changelogs'] = 'Changelogs';
+$lang['newest_video'] = 'Newest Video';
+$lang['new_screenshots'] = 'New screenshots';
+$lang['all_videos'] = 'All Videos';
+$lang['all_screenshots'] = 'All screenshots';
+$lang['top_voters'] = 'Top Voters';
 
 
 //menu
@@ -35,5 +47,7 @@ $lang['menu_support'] = 'Support';
 $lang['menu_termsofuse'] = 'Terms of Use';
 $lang['menu_rules'] = 'Rules';
 
+//text
+$lang['reward_vote'] = 'Monthly rewards will be given to the Top Voters. 500 silver coins for the Top 5 and an additional 25 gold coins for top 3.';
 
 ?>

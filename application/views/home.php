@@ -78,7 +78,7 @@
 
 <!-- anuncio -->
 	<div class="important_notice">
-		<p><a href="http://heroes-wow.com/wotlk/index.php?page=application"><b>Heroes WoW GM Recruitment</b></a></p>
+		<p><b><?php foreach ($this->news_model->getAnnounceSuperior()->result() as $row) { echo $row->description; } ?></b></p>
 	</div>
 <!-- anuncio -->
 	
@@ -87,26 +87,26 @@
  
 <!-- Index News -->
 <div class="index_news">
-
+<?php foreach ($this->news_model->getAnnounceInferior()->result() as $row) { ?>
    	<div class="welcome_to_warcry">
-    	<h1>Welcome to Heroes WoW</h1>
+    	<h1><?= $row->title; ?></h1>
 		<span></span>
         <p>
-        Heroes WoW is a quality server utilizing talented developers and resources to ensure the best fun experience around. Our team is a dedicated team that professionally creates and maintain everyday features for the players. Register today!
+        <?= $row->description; ?>
         </p>
     </div>
-   	
+<?php } ?>
 	<div class="news_container">
     	
 		<div class="header">
 			<div class="header_left">
-				Latest News
+				<?= $this->lang->line('latest_news'); ?>
 				<span class="title_overlay"></span>
 			</div>
 			<div class="header_right">
 				<ul>
-					<li><a href="https://heroes-wow.com/wotlk/index.php?page=news">Archived News</a></li>
-					<li><a href="https://heroes-wow.com/wotlk/index.php?page=changelogs">Changelogs</a></li>
+					<li><a href="<?= base_url();?>news"><?= $this->lang->line('archived_news'); ?></a></li>
+					<li><a href="<?= base_url();?>changelogs"><?= $this->lang->line('changelogs'); ?></a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -114,128 +114,27 @@
         
         <div class="active_latest_news">
         
-			
+			<?php foreach ($this->news_model->getNewLimit()->result() as $row) { ?>
 				<div class="news_thumb_image">
-					<a href="?page=news&id=188"><img src="<?= base_url(); ?>assets/images/6c5d2_trial_of_the_crusader_loading_screen_cropped.jpg" /></a>
+					<a href="?page=news&id=188"><img src="<?= $row->image; ?>" /></a>
 					<span class="news-img-overlay"></span>
 				</div>
+            
 				<div class="news_content">
-					<h1>Tier 22 </h1>
-					<h4>By <a href="#">Onezero</a>, 08.04.2017, 11:26:40 AM</h4>
-					<p>Tier 22 - Trial of the Crusader (10 Man) now released.</p>
-					<a class="readn_ln" href="?page=news&id=188">Read More</a>
+					<h1><?= $row->title; ?> </h1>
+					<h4><?= date('Y-m-d', $row->date); ?></h4>
+					<p><?= $row->description; ?></p>
+					<a class="readn_ln" href="<?= base_url(); ?>news/<?= $row->id; ?>"><?= $this->lang->line('read_more'); ?></a>
 				</div>
+            <?php } ?>
+
 				<div class="clear"></div>            
         </div>
         
-        <ul class="older_news">
-			
-					<li>
-						<div class="news_left_column">
-							<h2><a href="?page=news&id=187">Event</a></h2>
-							<h4>Posted by <a href="#">Onezero</a>, 30.03.2017, 12:56:03 AM</h4>
-						</div>
-						<div class="news_right_column">
-							<a class="readn_ln" href="?page=news&id=187">Read More</a>
-						</div>
-						<div class="clear"></div>
-					</li>
-					<li>
-						<div class="news_left_column">
-							<h2><a href="?page=news&id=186">Event</a></h2>
-							<h4>Posted by <a href="#">Onezero</a>, 26.03.2017, 3:09:35 PM</h4>
-						</div>
-						<div class="news_right_column">
-							<a class="readn_ln" href="?page=news&id=186">Read More</a>
-						</div>
-						<div class="clear"></div>
-					</li>
-					<li>
-						<div class="news_left_column">
-							<h2><a href="?page=news&id=185">Event</a></h2>
-							<h4>Posted by <a href="#">Onezero</a>, 21.03.2017, 12:13:12 AM</h4>
-						</div>
-						<div class="news_right_column">
-							<a class="readn_ln" href="?page=news&id=185">Read More</a>
-						</div>
-						<div class="clear"></div>
-					</li>        </ul>
-    
 	</div>
     
 </div>
 <!-- Index News.End -->
-
-	<!-- SOCIAL Media -->
-	<div class="social-media home_container">
-        <div class="media-buttons-holder"><!-- Media buttons holder -->
-        		
-                        
-		         <!-- Facebook -->
-		         <div class="media-wrapp">
-                    <div class="media-button-holder">
-                    
-	                 	<!-- New Media Button look -->
-	                 	<div class="facebook media-new-design" id="facebook-button">
-                        	<div class="button-container">
-	                    		<div class="new-design-left-part"><p class="icon " id="facebook-icon"></p></div>
-                                <div class="fb-like" data-href="http://www.facebook.com/Official.Heroes.WoW" data-send="false" data-width="500" data-show-faces="false"></div>                            </div>
-	                        <div class="new-design-count-cont">
-                                <span id="facebook-likes-counter">24752</span>								<span id="text">Likes</span>
-                           	</div>
-	                    </div>
-                        <!-- New Media Button look.End -->
-                        
-                    </div>
-		         </div>
-		            
-		         <!-- TWITTER -->
-		         <div class="media-wrapp">
-                    <div class="media-button-holder">
-                    
-	                 	<!-- New Media Button look -->
-	                 	<div class="twitter media-new-design" id="twitter-button">
-                        	<div class="button-container">
-	                    		<div class="new-design-left-part"><p class="icon " id="twitter-icon"></p></div>
-                                 <a href="https://twitter.com/HeroesWoW" class="twitter-follow-button"></a>                            </div>
-	                        <div class="new-design-count-cont">
-                            	<p class="arrow"></p>
-                                <span id="twitter-follows-counter"></span>								<span id="text">Followers</span>
-                            </div>
-	                    </div>
-                        <!-- New Media Button look.End -->
-                        
-                    </div>
-		         </div>
-                 
-                                  
-                 <!-- YOUTUBE -->
-		         <div class="media-wrapp media-wrapp-no-sep">
-                    <div class="media-button-holder">
-                    
-	                 	<!-- New Media Button look -->
-	                 	<div class="youtube media-new-design">
-	                    <!-- 	<script type="text/javascript">
-  VK.init({apiId: 4038924, onlyWidgets: true});
-</script>
-
-<!-- Put this div tag to the place, where the Like block will be -->
-<!-- <div id="vk_like"></div>
-<script type="text/javascript">
-VK.Widgets.Like("vk_like", {type: "button"});
-</script> -->
-<a href="http://vk.com/heroeswow" target="_blank"><div class="new-design-left-part"><p class="icon"></p><span>VK</span></div></a> 
-	                    </div>
-                        <!-- New Media Button look.End -->
-                        
-                    </div>
-		         </div>
-				 
-				 <div class="clear"></div>
-         
-         </div><!-- Media buttons holder.END -->
-	</div>
- 	<!-- SOCIAL Media.End -->
 
     <!-- MEDIA -->
     
@@ -243,8 +142,8 @@ VK.Widgets.Like("vk_like", {type: "button"});
         
         	<div class="new_trailer">
             	<div class="sub_header">
-                	<h1>Newest Video</h1>
-                    <a href="https://heroes-wow.com/wotlk/index.php?page=all-videos">All Videos</a>
+                	<h1><?= $this->lang->line('newest_video'); ?></h1>
+                    <a href="<?= base_url(); ?>videos"><?= $this->lang->line('all_videos'); ?></a>
                     <div class="clear"></div>
 					<span class="title_overlay"></span>
                 </div>
@@ -257,8 +156,8 @@ VK.Widgets.Like("vk_like", {type: "button"});
 							</a>                    </div>
                     
                     <div class="sub_header sreenshots">
-                        <h1>New Screenshots</h1>
-                        <a href="https://heroes-wow.com/wotlk/index.php?page=all-screenshots">All Screenshots</a>
+                        <h1><?= $this->lang->line('new_screenshots'); ?></h1>
+                        <a href="<?= base_url(); ?>screenshots"><?= $this->lang->line('all_screenshots'); ?></a>
                         <div class="clear"></div>
 						<span class="title_overlay"></span>
                 	</div>

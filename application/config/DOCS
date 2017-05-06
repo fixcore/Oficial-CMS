@@ -1,0 +1,7 @@
+Table -- 
+announcements
+id = automatic
+type {
+    1 = superior announcement
+    2 = inferior announcement
+}
