@@ -91,7 +91,7 @@ $(function()
 function calcTime(city,offset)
 {var d=new Date();var utc=d.getTime()+(d.getTimezoneOffset()*60000);var nd=new Date(utc+(3600000*parseInt(offset)));return nd.toString();}
 function ServerTimeCloack()
-{var currentTime=new Date(calcTime($TIMEZONE,$TIMEZONEOFFSET));var h=currentTime.getHours();var m=currentTime.getMinutes();var s=currentTime.getSeconds();setTimeout(function(){ServerTimeCloack();},1000);if(h<10)
+{var currentTime=new Date(calcTime());var h=currentTime.getHours();var m=currentTime.getMinutes();var s=currentTime.getSeconds();setTimeout(function(){ServerTimeCloack();},1000);if(h<10)
 {h="0"+h;}
 if(m<10)
 {m="0"+m;}
@@ -531,13 +531,4 @@ return false;var v=document.createElement('video');switch(str){case'webm':return
 return false;}
 $.fn.videoBG.wrapper=function(){var $wrap=$('<div/>');$wrap.addClass('videoBG_wrapper').css('position','absolute').css('top',0).css('left',0);return $wrap;}
 $.fn.videoBG.defaults={mp4:'',ogv:'',webm:'',poster:'',autoplay:true,loop:5,scale:false,position:"absolute",opacity:1,textReplacement:false,zIndex:0,width:0,height:0}})(jQuery);$.fn.isMobileSafari=function(){return(navigator.userAgent.match(/(iPod|iPhone|iPad)/));};$.fn.canPositionFixed=function(){var container=document.body;if(document.createElement&&container&&container.appendChild&&container.removeChild){var el=document.createElement('div');if(!el.getBoundingClientRect)return null;el.innerHTML='x';el.style.cssText='position:fixed;top:100px;';container.appendChild(el);var originalHeight=container.style.height,originalScrollTop=container.scrollTop;container.style.height='3000px';container.scrollTop=500;var elementTop=el.getBoundingClientRect().top;container.style.height=originalHeight;var isSupported=(elementTop===100);container.removeChild(el);container.scrollTop=originalScrollTop;return isSupported;}
-return null;};var cookieconsent_options={message:"This website uses cookies to ensure you get the best experience on our website",dismiss:"Got it!",learnMore:"More info",link:$BaseURL+"/index.php?page=cookie-policy",delay:5000,};function setCookie(cname,cvalue,exdays)
-{var d=new Date();d.setTime(d.getTime()+(exdays*24*60*60*1000));var expires="expires="+d.toUTCString();document.cookie=cname+"="+cvalue+"; "+expires;}
-function getCookie(cname)
-{var name=cname+"=";var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1);if(c.indexOf(name)==0)return c.substring(name.length,c.length);}
-return"";}
-$(document).ready(function(e)
-{setTimeout(function()
-{var cc_agreed=getCookie("cc_agreed");if(cc_agreed!='1')
-{var html=$('<div class="cookie-consent" id="cookie-consent">'+'<div class="container5 cc_container clearfix">'+'<button class="simple_button cc_btn" id="cc_dismiss">'+cookieconsent_options.dismiss+'</button>'+'<p class="cc_message">'+cookieconsent_options.message+' <a class="cc_more_info" href="'+cookieconsent_options.link+'">'+cookieconsent_options.learnMore+'</a></p>'+'</div>'+'</div>');$('#cc_dismiss',html).click(function(e)
-{$('#cookie-consent').remove();setCookie("cc_agreed",'1',365);});$('body').append(html);}},cookieconsent_options.delay);});
+return null;};

@@ -157,7 +157,7 @@
                     
                     <div class="sub_header sreenshots">
                         <h1><?= $this->lang->line('new_screenshots'); ?></h1>
-                        <a href="<?= base_url(); ?>screenshots"><?= $this->lang->line('all_screenshots'); ?></a>
+                        <a href="<?= base_url(); ?>"><?= $this->lang->line('all_screenshots'); ?></a>
                         <div class="clear"></div>
 						<span class="title_overlay"></span>
                 	</div>
@@ -399,12 +399,6 @@
 				<!-- Optional, see options below -->
 				
 			</div>
-				<script>
-					$(window).load(function()
-					{
-						$('.blueberry').blueberry();
-					});
-				</script>        
 	</div>
     
 </div>
