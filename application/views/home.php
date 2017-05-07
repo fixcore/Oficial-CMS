@@ -1,6 +1,13 @@
 <!-- don't touch -->
 <title><?= $this->config->item('project_name'); ?> - <?= $this->lang->line('home'); ?></title>
 </head>
+<?php 
+if(isset($_SESSION['email']))
+	$bnetid = $this->users->getIdPerEmail($_SESSION['email']);
+
+if(isset($_SESSION['username']))
+	$usernameid = $this->users->getIdPerUsername($_SESSION['username']);
+?>
 <!-- don't touch -->
 <body>
 
@@ -45,21 +52,60 @@
 	<!-- Membership Sh!t! -->
 	<div class="membership-holder">
   		<div class="membership-bar">
+			  <?php if(isset($_SESSION['email']) || isset($_SESSION['username'])) { ?>
+			  <!-- Logged In -->
+     			<div class="logged_in_bar member-side-left">
+					<div class="logged_in_bar_bg">
+						
+						<div class="logout-btn-cont">
+							<a id="logout" href="<?= base_url(); ?>user/logout"><span></span><p></p></a>
+						</div>
+						
+						<div class="avatar"><span></span><a href="https://heroes-wow.com/wotlk/index.php?page=avatars" style="background-image:url(https://heroes-wow.com/wotlk/resources/avatars/rookie_avatar_2.jpg); background-size: 100%;"></a></div>
+		   
+						<div class="info">
+							<p><?= $this->lang->line('welcome_login'); ?>, <font color="#bf873f" style="font-size: 13px;"><a href="https://heroes-wow.com/wotlk/index.php?page=profile&uid=499478" class="username">
+							<?php if(isset($_SESSION['email'])){ ?><?= $this->users->getUsername($bnetid); ?><?php } ?>
+							<?php if(isset($_SESSION['username'])){ ?><?= $this->users->getUsername($usernameid); ?><?php } ?>
+							</a></font>!</p>
+							<div class="coints">
+								<span id="gold_str">0</span> Gold & 
+								<span id="silver_str">0</span> Silver Coins
+							</div>
+							
+							<!-- Private Messages
+									<div class="messages"><a href="#"><span class="icon"></span>55</a></div>
+							Private Messages . End-->
+									<div class="messages"><a href="<?= base_url(); ?>user/logout"><span class="icon"></span>Logout</a></div>
+							<!--<div class="vote-now-ico"><a href="#"><span id="icon"></span><p id="icon"></p></a></div>-->
+						</div>
+		   
+						<ul class="acc-menu">
+							<li><a id="acc-panel" href="<?= base_url(); ?>user"><span></span><p></p></a></li>
+							<li class="not-voted-yet-effect"><div></div></li><li><a id="vote" href="<?= base_url(); ?>vote"><span></span><p></p></a></li>
+							<li><a id="buy-coins" href="<?= base_url(); ?>donate"><span></span><p></p></a></li>
+							<li><a id="store" href="<?= base_url(); ?>user/settings"><span></span><p></p></a></li>
+						</ul>
+					</div>
+				</div>
+            	<!-- Logged In.End -->
+			  <?php } else { ?>
             	<!--Not logged-->
             	<div class="member-side-left">
 	       			<ul class="not-logged-menu">
              			<li class="login-home"><a id="login" href="<?= base_url(); ?>user/login"><p></p><span></span></a></li>
-                    	<li class="register-home"><a id="register" href="https://heroes-wow.com/wotlk/index.php?page=register"><p></p><span></span></a></li>
+                    	<li class="register-home"><a id="register" href="<?= base_url(); ?>user/register"><p></p><span></span></a></li>
     	   			</ul>
             	</div>
            	 	<!--Not logged.End-->
+			  <?php } ?>
 			<div class="memeber-side-right">
 				<div class="bonus-m-links">
-					<a href="https://forum.heroes-wow.com/showthread.php?17-Frequently-asked-Questions-and-Topics">Frequently Asked Questions</a>
-					<a href="https://heroes-wow.com/wotlk/index.php?page=howto&activate=0">Connection Guide</a>
+					<a href="<?= base_url(); ?>">Frequently Asked Questions</a>
+					<a href="<?= base_url(); ?>">Connection Guide</a>
 				</div>
 				<div class="search" align="left">
-					<form action="https://heroes-wow.com/wotlk/forums.php" method="get" id="search">
+					<form action="" method="get" id="search">
 						<input type="text" name="keywords" maxlength="128" title="Search for keywords" placeholder="Search for keywords"><input type="submit" value="">
 <input type="hidden" value="search" name="page" />
 					</form>

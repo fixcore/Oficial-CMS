@@ -28,5 +28,34 @@ class Users extends CI_Model
         $this->world = $this->load->database('world',TRUE);
         if( ! ini_get('date.timezone') ) { date_default_timezone_set('GMT'); }
     }
+    public function getIdPerEmail($email){
+        $query = $this->auth->query("SELECT * FROM account WHERE email = '".$email."'");
+        foreach ($query->result() as $row) {
+            return $row->id;
+        }
+    }
+
+    public function getIdPerUsername($username){
+        $query = $this->auth->query("SELECT * FROM account WHERE username = '".$username."'");
+        foreach ($query->result() as $row) {
+            return $row->id;
+        }
+    }
+
+    public function getEmail($id)
+    {
+        $query = $this->auth->query("SELECT * FROM account WHERE id = '".$id."'");
+        foreach ($query->result() as $row) {
+            return $row->id;
+        }
+    }
+
+    public function getUsername($id)
+    {
+        $query = $this->auth->query("SELECT * FROM account WHERE id = '".$id."'");
+        foreach ($query->result() as $row) {
+            return $row->username;
+        }
+    }
 
 }

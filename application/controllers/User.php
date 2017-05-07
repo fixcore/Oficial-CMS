@@ -33,8 +33,27 @@ class User extends CI_Controller {
 
 	public function login()
 	{
+		if(isset($_SESSION['email']) || isset($_SESSION['username']))
+			redirect(base_url(),'refresh');
+
 		$this->load->view('general/header');
 		$this->load->view('user/login');
 		$this->load->view('general/footer');
+	}
+
+	public function register()
+	{
+		if(isset($_SESSION['email']) || isset($_SESSION['username']))
+			redirect(base_url(),'refresh');
+
+		$this->load->view('general/header');
+		$this->load->view('user/register');
+		$this->load->view('general/footer');
+	}
+
+	public function logout()
+	{
+		session_destroy();
+		redirect(base_url(),'refresh');
 	}
 }

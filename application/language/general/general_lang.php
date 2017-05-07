@@ -34,6 +34,7 @@ $lang['new_screenshots'] = 'New screenshots';
 $lang['all_videos'] = 'All Videos';
 $lang['all_screenshots'] = 'All screenshots';
 $lang['top_voters'] = 'Top Voters';
+$lang['welcome_login'] = 'Welcome back';
 
 
 //menu

@@ -32,8 +32,11 @@ class Expansion_selector_model extends CI_Model
     public function getLoginOne($username, $password) //tbc, wotlk, cata, mop
     {
             $query = $this->auth->query("SELECT * FROM account WHERE username = '".$username."' AND sha_pass_hash = '".$password."'");
-            if($query->num_rows() > 0)
+            if($query->num_rows() > 0){
+                session_start();
+                $_SESSION['username']= $username;
                 redirect(base_url(),'refresh');
+            }
             else
             echo("User don't match");
     }
@@ -41,8 +44,11 @@ class Expansion_selector_model extends CI_Model
     public function getLoginTwo($email, $password) //wod, legion
     {
             $query = $this->auth->query("SELECT * FROM battlenet_accounts WHERE email = '".$email."' AND sha_pass_hash = '".$password."'");
-            if($query->num_rows() > 0)
+            if($query->num_rows() > 0){
+                session_start();
+                $_SESSION['email']= $email;
                 redirect(base_url(),'refresh');
+            }
             else
             echo("User don't match");
     }
