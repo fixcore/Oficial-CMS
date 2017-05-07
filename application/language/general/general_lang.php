@@ -22,6 +22,9 @@
 $lang['home'] = 'Home';
 $lang['sign_in'] = 'Sign in';
 $lang['register'] = 'Register';
+$lang['email_address'] = 'Email Address';
+$lang['username'] = 'Username';
+$lang['password'] = 'Password';
 $lang['read_more'] = 'Read More';
 $lang['latest_news'] = 'Latest News';
 $lang['archived_news'] = 'Archived News';

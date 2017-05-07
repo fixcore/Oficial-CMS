@@ -7,7 +7,7 @@
  <center>
 
  <!--HEADER-->
- <?php require('general/menu.php'); ?>
+ <?php $this->load->view('general/menu'); ?>
  <!--HEADER.End-->
 
 <!-- images -->
@@ -48,7 +48,7 @@
             	<!--Not logged-->
             	<div class="member-side-left">
 	       			<ul class="not-logged-menu">
-             			<li class="login-home"><a id="login" href="#"><p></p><span></span></a></li>
+             			<li class="login-home"><a id="login" href="<?= base_url(); ?>user/login"><p></p><span></span></a></li>
                     	<li class="register-home"><a id="register" href="https://heroes-wow.com/wotlk/index.php?page=register"><p></p><span></span></a></li>
     	   			</ul>
             	</div>

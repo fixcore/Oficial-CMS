@@ -29,16 +29,22 @@ class Expansion_selector_model extends CI_Model
         if( ! ini_get('date.timezone') ) { date_default_timezone_set('GMT'); }
     }
 
-    public function getSelectorForLogin($expansion)
+    public function getLoginOne($username, $password) //tbc, wotlk, cata, mop
     {
-        if($expansion == 1 || $expansion == 2 || $expansion == 3 || $expansion == 4)
-        {
-            
-        }
-        if($expansion == 5 || $expansion == 6)
-        {
+            $query = $this->auth->query("SELECT * FROM account WHERE username = '".$username."' AND sha_pass_hash = '".$password."'");
+            if($query->num_rows() > 0)
+                redirect(base_url(),'refresh');
+            else
+            echo("User don't match");
+    }
 
-        }
+    public function getLoginTwo($email, $password) //wod, legion
+    {
+            $query = $this->auth->query("SELECT * FROM battlenet_accounts WHERE email = '".$email."' AND sha_pass_hash = '".$password."'");
+            if($query->num_rows() > 0)
+                redirect(base_url(),'refresh');
+            else
+            echo("User don't match");
     }
 
     public function getSelectorForRegister($expansion)
@@ -51,6 +57,21 @@ class Expansion_selector_model extends CI_Model
         {
 
         }
+    }
+
+    public function getTrueSelector($expansion)
+    {
+        switch($expansion)
+        {
+            case 1: return '1';
+            case 2: return '1';
+            case 3: return '1';
+            case 4: return '1';
+            case 5: return '2';
+            case 6: return '2';
+        }
+
+        return false;
     }
 
 
